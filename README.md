@@ -1,5 +1,7 @@
 # calculator
 
+![Demo](https://github.com/synicalsyntax/calculator/raw/master/images/demo.gif)
+
 > Command line game randomly generating simple mathematical questions to be solved quickly
 
 Developed for the AP Computer Science Principles course's Create Task (2017 - 2018)
