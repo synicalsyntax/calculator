@@ -7,12 +7,12 @@ class Game {
   constructor(operations) {
     const operation = Util.random(Array.from(operations.keys()));
     this.question = operations.get(operation).call(Util);
-    this.answer = eval(this.question.problem);
+    this.answer = eval(this.question);
   }
 
   init() {
     console.log('Answer the following question in 15 seconds to win!');
-    console.log(colors.cyan(`\tWhat is ${this.question.problem}?`));
+    console.log(colors.cyan(`\tWhat is ${this.question}?`));
 
     const start = new Date().getTime();
     setTimeout(() => this.cancel(this.answer), 15000);
