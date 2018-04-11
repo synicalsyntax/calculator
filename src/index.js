@@ -6,7 +6,7 @@ fs.readdir(`${__dirname}/operations`, (err, files) => {
   if (err) throw new Error(err);
   for (const file of files) {
     const data = require(`${__dirname}/operations/${file}`);
-    operations.set(file.slice(0, -3), data);
+    operations.set(file, data);
   }
 
   const game = new Game(operations);
