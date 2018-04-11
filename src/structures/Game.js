@@ -1,5 +1,6 @@
-const colors = require('colors/safe');
+// external module: https://github.com/flatiron/prompt
 const prompt = require('prompt');
+const colors = require('colors/safe');
 
 const Util = require('../Util/util');
 
@@ -36,7 +37,7 @@ class Game {
     prompt.get(schema, err => {
       if (err) process.exit();
       const end = new Date().getTime();
-      const time = Util.format(start, end);
+      const time = Math.round(((end - start) / 1000) * 100) / 100;
       console.log(colors.green(`Congratulations! You answered correctly in ${time} seconds!`));
       process.exit();
     });
